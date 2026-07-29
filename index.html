@@ -1,215 +1,253 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="portfolio.css">
-  <script src="portfolio.js"></script>
-  <title>Maria Dolenko | Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maria Dolenko - Web Growth Specialist, marketing website developer, SEO specialist, and product-minded website builder.">
+  <link rel="stylesheet" href="portfolio.css">
+  <script src="portfolio.js" defer></script>
+  <title>Maria Dolenko | Web Growth Portfolio</title>
 </head>
-
 <body>
-  <header>
-    <h1>Maria Dolenko</h1>
-    <p>HubSpot Developer | Front-End</p>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Maria Dolenko portfolio home">
+      <span class="brand-mark">MD</span>
+      <span class="brand-name">Maria Dolenko</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <button onclick="showSection('summary')">Career Summary</button>
-    <button onclick="showSection('skills')">Skills</button>
-    <button onclick="showSection('experience')">Experience</button>
-    <button onclick="showSection('education')">Education</button>
-    <button onclick="showSection('courses')">Courses & Learning</button>
-    <button onclick="showSection('portfolio')">Portfolio</button>
-  </nav>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Web Growth / Marketing Websites / SEO</p>
+        <h1>I build marketing websites that are easy to scale, edit, and grow.</h1>
+        <p class="hero-text">I combine 8 years of SEO experience with hands-on marketing website development, HTML/CSS, product thinking, and AI-assisted delivery. My strongest work is turning messy website needs into reusable systems that marketing teams can actually use.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">View selected work</a>
+          <a class="button secondary" href="mailto:mashadolenko@gmail.com">Contact me</a>
+        </div>
+      </div>
 
-  <div class="content">
-    <div id="summary" class="section active">
-      <p>HubSpot developer with over 3 years of experience in building websites and custom modules on HubSpot CMS.
-        Previously worked as an SEO specialist for 8 years, managing projects of various scales and niches,
-        growing from a junior to a senior position. Currently focused on developing my front-end skills, with
-        hands-on experience in HTML, CSS, JavaScript, and HubL. Looking for opportunities for professional
-        growth, teamwork, and contributing to meaningful products.</p>
-    </div>
-    <div id="skills" class="section">
-      <p><strong style="color:#04a0af;">Tech:</strong> HTML5, CSS3, JavaScript (base), HubL, HubSpot CMS</p>
-      <p><strong style="color:#04a0af;">Tools:</strong> HubSpot Design Manager, VS Code, Figma, Adobe, mostly all
-        of the SEO tools</p>
-      <p><strong style="color:#04a0af;">Soft:</strong> Open communicator, team player, self-motivated,
-        detail-oriented.</p>
-      <p><strong style="color:#04a0af;">Languages:</strong> Ukrainian - native, English - upper-intermediate,
-        Spanish - beginner, Deutsch - beginner</p>
-    </div>
-    <div id="experience" class="section">
-      <h2 style="color:#04a0af;">Wizer – HubSpot Developer / SEO (USA, Remote, 2022–2025)</h2>
-      <ul class="custom-list">
-        <li>
-          Developed over 20 custom modules for HubSpot CMS, including tabbed interfaces, sliders, accordions,
-          testimonial blocks, pricing tables, dynamic call-to-action sections, and reusable content components for
-          marketing teams
-        </li>
-        <li>
-          Built a fully custom HubSpot theme from scratch, including templates for blog, landing pages, service
-          listings, and multilingual support
-        </li>
-        <li>
-          Refactored and optimized template structure for performance, SEO, and maintainability; introduced modular
-          architecture with flexible sections for marketers to edit without developer involvement
-        </li>
-        <li>
-          Implemented base SEO enhancements, such as meta tags, Open Graph markup, alt text automation, sitemap control,
-          and semantic HTML
-        </li>
-        <li>
-          Collaborated closely with marketers, designers, and other developers to align user experience, branding, and
-          performance requirements across departments
-        </li>
-        <li>
-          Used HubL, HTML, CSS (SASS), and JavaScript to build responsive and accessible UI components, ensuring
-          cross-browser and mobile compatibility
-        </li>
-      </ul>
-      <h2 style="color:#04a0af;">SEO Specialist (Ukraine, In-house, 2015–2022)</h2>
-      <ul class="custom-list">
-        <li>
-          Promoted websites in e-commerce, niche, and highly competitive industries
-        </li>
-        <li>
-          Grew from junior to senior SEO specialist and gained team management experience
-        </li>
-        <li>
-          Developed promotion strategies and worked with analytics, technical SEO, and content
-        </li>
-        <li>
-          Worked on SEO for both white niche and darknet websites
-        </li>
-      </ul>
-    </div>
-    <div id="education" class="section">
-      <h2>Taras Shevchenko National University of Kyiv</h2>
-      <p>2011–2014 – Faculty of Economics, Bachelor’s Degree</p>
-      <p>2014–2016 – Faculty of Economics, Master’s Degree</p>
-    </div>
-    <div id="courses" class="section">
-      <p>Front-End Path, Codecademy (ongoing)</p>
-      <p>HubSpot CMS for Developers, HubSpot Academy</p>
-    </div>
-    <div id="portfolio" class="section">
-      <section id="portfolio" class="portfolio-section">
-        <div class="slider-container">
-          <button class="slider-btn prev">&#10094;</button>
-          <div class="slider">
-            <div class="slide active">
-              <h2 style="color:#04a0af;">Challenge Game</h2>
-              <h3>Core Functionality</h3>
-              <p>Each challenge is designed with a clear goal: to “hack” the system and retrieve specific data — such as
-                a URL, token, or code snippet. Once obtained, this data must be entered into a dedicated input field to
-                validate whether the hack was successful.</p>
-              <p>
-                A dynamic frontend module for a series of cybersecurity challenges where users attempt to "hack" the
-                system to extract specific data (e.g., URL, token, or code snippet).
-              </p>
-              <h3>Key Features:</h3>
-              <ul>
-                <li>Input field for submitting payloads and verifying solutions</li>
-                <li>Multiple timers to simulate real-time pressure (top bar, button, animated tab bar)</li>
-                <li>Tab navigation for switching between challenges</li>
-                <li>Leaderboard showing participant stats and top performers</li>
-              </ul>
-              <h3>My Contributions:</h3>
-              <ul>
-                <li>Built the full <strong>frontend</strong> using <code>HTML</code>, <code>CSS</code>, and
-                  <code>JavaScript</code></li>
-                <li>Implemented layout, styles, transitions, and interactivity</li>
-                <li>Backend and leaderboard logic were handled by other team members</li>
-              </ul>
-              <img src="challenge-game.png" alt="Testimonials module">
+      <div class="hero-panel" aria-label="Portfolio highlights">
+        <div class="metric">
+          <span>8 yrs</span>
+          <p>SEO, technical audits, content structure, and growth strategy</p>
+        </div>
+        <div class="metric">
+          <span>3+ yrs</span>
+          <p>Marketing website ownership, reusable CMS modules, landing pages, and themes</p>
+        </div>
+        <div class="metric">
+          <span>~30</span>
+          <p>Reusable CMS modules built to avoid one-off duplication</p>
+        </div>
+        <div class="metric">
+          <span>~50</span>
+          <p>Website pages, landing pages, templates, and reusable sections supported</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section intro-grid" id="approach">
+      <div>
+        <p class="eyebrow">What I do</p>
+        <h2>Web work with product logic behind it.</h2>
+      </div>
+      <div class="intro-copy">
+        <p>I do not treat landing pages as isolated files. I think about the system behind them: reusable sections, content manager autonomy, SEO structure, mobile behavior, clear UX, and how fast the team can ship the next page without breaking consistency.</p>
+        <p>My current focus is web growth roles where SEO, marketing websites, frontend implementation, product thinking, and AI-assisted workflows meet.</p>
+      </div>
+    </section>
+
+    <section class="section" id="work">
+      <div class="section-heading">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects and systems I have built.</h2>
+      </div>
+
+      <article class="case featured-case">
+        <div class="case-content">
+          <p class="case-kicker">CMS / SaaS marketing site</p>
+          <h3>Reusable marketing website system for Wizer</h3>
+          <p>I owned and maintained a HubSpot-based marketing website for a cybersecurity education SaaS startup. All custom modules and theme work in this project were built by me without AI assistance. The main goal was not to produce modules for the sake of quantity, but to create a reusable system that helped marketers and content managers build pages without developer dependency.</p>
+          <ul class="check-list">
+            <li>Built a custom HubSpot theme from scratch using HubL, HTML, CSS, and basic JavaScript.</li>
+            <li>Created around 30 reusable CMS modules manually, with no AI assistance, for flexible use across different page types.</li>
+            <li>Supported around 50 landing pages, website pages, templates, and reusable sections.</li>
+            <li>Designed drag-and-drop editing workflows so content managers could update pages independently.</li>
+            <li>Worked with a marketing director, two content managers, and a designer.</li>
+          </ul>
+        </div>
+        <button class="image-frame" type="button" data-full-image="challenge-game.png" aria-label="Open Wizer module screenshot">
+          <img src="challenge-game.png" alt="Interactive cybersecurity challenge module interface">
+        </button>
+      </article>
+
+      <div class="module-grid" aria-label="CMS module examples">
+        <article class="module-card">
+          <button class="module-image" type="button" data-full-image="testimonial-grid.png" aria-label="Open testimonial grid screenshot">
+            <img src="testimonial-grid.png" alt="Reusable testimonial grid module">
+          </button>
+          <div>
+            <h3>Testimonials module</h3>
+            <p>Reusable testimonial grid with flexible content height and responsive layout for social-proof pages.</p>
+          </div>
+        </article>
+
+        <article class="module-card">
+          <button class="module-image" type="button" data-full-image="img-slider.png" aria-label="Open card slider screenshot">
+            <img src="img-slider.png" alt="Reusable card slider module">
+          </button>
+          <div>
+            <h3>Card slider</h3>
+            <p>Dynamic slider module designed so content managers could add and reorder cards without code changes.</p>
+          </div>
+        </article>
+
+        <article class="module-card">
+          <button class="module-image" type="button" data-full-image="pricing-calculator.png" aria-label="Open pricing calculator screenshot">
+            <img src="pricing-calculator.png" alt="Pricing table and calculator module">
+          </button>
+          <div>
+            <h3>Pricing calculator</h3>
+            <p>Interactive pricing table with responsive plan cards, input logic, and clear conversion paths.</p>
+          </div>
+        </article>
+
+        <article class="module-card">
+          <button class="module-image" type="button" data-full-image="accordion.png" aria-label="Open accordion screenshot">
+            <img src="accordion.png" alt="Accordion module with filtering">
+          </button>
+          <div>
+            <h3>Accordion with filtering</h3>
+            <p>Expandable content module with tag-based filtering for large structured content sets.</p>
+          </div>
+        </article>
+      </div>
+
+      <article class="case agromega-case">
+        <div class="case-content">
+          <p class="case-kicker">Pet project / End-to-end product ownership / Agriculture</p>
+          <h3>Agromega plant diary and planner</h3>
+          <p>Since April 2026, I have owned the product direction for an early-stage agriculture web product. I designed the plant diary and planner from scratch: business processes, user flows, data logic, what information is collected, where it comes from, how it is displayed, and which features should be included first.</p>
+
+          <div class="feature-list">
+            <div>
+              <span>Dashboard</span>
+              <p>A daily overview with active plants, actions of the week, plants that need attention, seasonal harvest, and a practical daily recommendation.</p>
             </div>
-            <div class="slide">
-              <h3>Custom Testimonials Module</h3>
-              <p>This custom re-usable module was designed to display authentic user feedback gathered from various
-                social media platforms.
-                Each card showcases a real comment about the product, highlighting users' appreciation and experience.
-              </p>
-              <h3>Key Features:</h3>
-              <ul>
-                <li>Dynamic content: Each card contains a user’s comment, along with their name, position, platform, and
-                  date</li>
-                <li>Responsive grid layout: The cards are displayed in a flexible, multi-column grid that adapts to
-                  different screen sizes.</li>
-                <li>Variable content height: Since the length of each testimonial varies, I implemented a
-                  JavaScript-based layout engine that
-                  dynamically stacks cards one after another without enforcing uniform height. This avoids whitespace
-                  and ensures optimal use of
-                  vertical space.</li>
-              </ul>
-              <img src="testimonial-grid.png" alt="Testimonials module">
+            <div>
+              <span>Diary cards</span>
+              <p>Growing zones with plant groups, tags, last action, active plant count, action count, and fast actions for watering, harvest, photo, notes, and more.</p>
             </div>
-            <div class="slide">
-              <h3>Card slider Section</h3>
-              <p>Customized slider module - it allows content managers to add an unlimited number of cards without
-                requiring developer support. </p>
-              <h3>Key Features:</h3>
-              <ul>
-                <li>Unlimited cards: The slider dynamically adapts to the number of items added.</li>
-                <li>Smooth transitions: Seamless navigation with left/right arrow controls.</li>
-                <li>Responsive design: Fully optimized for all screen sizes and devices.</li>
-                <li>Reusable component: Easily implemented across different pages or sections.</li>
-              </ul>
-              <img src="img-slider.png" alt="Tabbed services">
+            <div>
+              <span>History timeline</span>
+              <p>A chronological care log that groups actions by date, supports plant filters, shows disease and watering events, and connects actions with photos and AI advice.</p>
             </div>
-            <div class="slide">
-              <h3>Pricing Table Module</h3>
-              <p>A dynamic pricing table designed to clearly present different subscription plans and
-                help users estimate total costs based on the number of users.</p>
-              <h3>Key Features:</h3>
-              <ul>
-                <li>Pricing cards: Each card displays a plan’s name, features, and base price per user. </li>
-                <li>Interactive calculator: Users can input team size to see real-time total cost for each plan. </li>
-                <li>User guidance: Includes clear CTAs — either to start registration or go directly to checkout. </li>
-                <li>Responsive & user-friendly: Designed to work smoothly on desktop and mobile devices. </li>
-              </ul>
-              <h3>Technologies Used:</h3>
-              <ul>
-                <li>HTML for structure</li>
-                <li>CSS for layout, responsive design, and visual hierarchy</li>
-                <li>JavaScript/HubL for dynamic price calculation and form interaction</li>
-              </ul>
-              <h3>My Role:</h3>
-              <p>I was responsible for the full front-end implementation of the pricing table. </p>
-              <img src="pricing-calculator.png" alt="Pricing table">
-            </div>
-            <div class="slide">
-              <h3>Accordion Module with Tag-Based Filtering</h3>
-              <p>This interactive accordion module was designed to organize a large set of content—such 
-                as courses or informational blocks—in a user-friendly and accessible format.</p>
-              <h3>Key Features:</h3>
-              <ul>
-                <li>Expandable Accordions:<br> Each item expands on click, revealing additional information such as a course 
-                  description or functional details. Includes a clear CTA button that directs users to take action 
-                  (e.g., launch a course or sign up). </li>
-                <li>Tag-Based Filtering: <br> At the top of the module, category tags allow users to filter 
-                  visible accordions by topic without reloading the page. </li>
-                <li>Responsive Layout & Smooth Transitions:<br> The entire module is fully responsive and features smooth 
-                  expand/collapse animations, enhancing the overall user experience. </li>
-              </ul>
-              <h3>My Role:</h3>
-              <p>I handled the complete implementation of this module, including structure, styling, 
-                and filtering logic, using HTML, CSS, and JS. </p>
-              <img src="accordion.png" alt="Accordion">
+            <div>
+              <span>Plant collection</span>
+              <p>Structured plant profiles with variety, custom name, planting date, plant age, diary links, status, last care action, and active/archive states.</p>
             </div>
           </div>
-          <button class="slider-btn next">&#10095;</button>
+
+          <p class="case-summary">This case shows the next stage of my workflow: using Codex as a product and development partner while keeping ownership of product decisions. I can take an unclear early-stage product and turn it into a working system: business logic, UX flows, data structure decisions, visual presentation, frontend tasks, AI-assisted development prompts, tests, QA checks, and iterative improvements.</p>
         </div>
-      </section>
-      <div id="imgModal" class="modal" style="display:none;">
-        <span class="close"
-          style="position:absolute; top:10px; right:20px; font-size:40px; cursor:pointer; color:white;">&times;</span>
-        <img id="imgPreview" style="max-width:90%; max-height:90%; margin:auto;" />
+
+        <div class="agromega-slider" aria-label="Agromega product screenshots slider">
+          <div class="slider-topline">
+            <p class="eyebrow">Product screens</p>
+            <span class="slide-counter" aria-live="polite">1 / 4</span>
+          </div>
+
+          <div class="agromega-slides">
+            <button class="agromega-slide active" type="button" data-full-image="agromega-dashboard.png" aria-label="Open Agromega dashboard screenshot">
+              <img src="agromega-dashboard.png" alt="Agromega plant diary dashboard with daily advice and summary cards">
+            </button>
+            <button class="agromega-slide" type="button" data-full-image="agromega-diaries.png" aria-label="Open Agromega diaries screenshot">
+              <img src="agromega-diaries.png" alt="Agromega diary list with plant groups and quick actions">
+            </button>
+            <button class="agromega-slide" type="button" data-full-image="agromega-history.png" aria-label="Open Agromega history screenshot">
+              <img src="agromega-history.png" alt="Agromega timeline with plant care history and AI advice">
+            </button>
+            <button class="agromega-slide" type="button" data-full-image="agromega-plants.png" aria-label="Open Agromega plant collection screenshot">
+              <img src="agromega-plants.png" alt="Agromega plant collection cards with plant status and latest actions">
+            </button>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-control" type="button" data-slider-direction="prev" aria-label="Previous Agromega screenshot">Previous</button>
+            <button class="slider-control" type="button" data-slider-direction="next" aria-label="Next Agromega screenshot">Next</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section capability-band">
+      <div class="capability">
+        <h3>Web & CMS</h3>
+        <p>CMS website systems, custom modules, landing pages, website themes, HTML5, CSS3, responsive layout, basic JavaScript, HubSpot CMS, HubL.</p>
       </div>
-    </div>
+      <div class="capability">
+        <h3>SEO & Growth</h3>
+        <p>On-page SEO, technical SEO, semantic research, content structure, traffic analysis, internal linking, scalable content workflows.</p>
+      </div>
+      <div class="capability">
+        <h3>Product & AI</h3>
+        <p>UX logic, product structure, user scenarios, Codex/LLM-assisted delivery, prompting, iteration, QA, content scaling.</p>
+      </div>
+    </section>
+
+    <section class="section timeline" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>The path behind the portfolio.</h2>
+      </div>
+
+      <div class="timeline-item">
+        <span class="period">Apr 2026 - present</span>
+        <div>
+          <h3>Agromega - Product Owner / Frontend Contributor</h3>
+          <p>Pet project. Owned the product concept, business logic, UX flows, data presentation, frontend iteration, and AI-assisted development workflow for a plant diary and planner.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="period">2022 - 2025</span>
+        <div>
+          <h3>Wizer - Marketing Website Developer / SEO</h3>
+          <p>Owned and developed a CMS-based marketing website for a cybersecurity education SaaS startup. Built a custom website theme, reusable modules, landing pages, and workflows for a small marketing team.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <span class="period">2015 - 2022</span>
+        <div>
+          <h3>SEO Specialist - In-house</h3>
+          <p>Worked across e-commerce, niche, and highly competitive projects. Grew from junior to senior SEO specialist and gained team management experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Looking for remote web growth, marketing website, or product-minded frontend roles.</h2>
+      </div>
+      <div class="contact-actions">
+        <a class="button primary" href="mailto:mashadolenko@gmail.com">mashadolenko@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <div class="image-modal" id="imageModal" hidden>
+    <button class="modal-close" type="button" aria-label="Close image preview">Close</button>
+    <img id="modalImage" src="" alt="">
   </div>
 </body>
-
 </html>
