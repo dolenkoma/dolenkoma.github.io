@@ -25,35 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
     button.addEventListener("click", () => openModal(button));
   });
 
-  const agromegaSlides = document.querySelectorAll(".agromega-slide");
-  const agromegaControls = document.querySelectorAll("[data-slider-direction]");
-  const slideCounter = document.querySelector(".slide-counter");
-  let agromegaIndex = 0;
+  const sliders = document.querySelectorAll("[data-slider]");
 
-  function showAgromegaSlide(nextIndex) {
-    if (!agromegaSlides.length) {
-      return;
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll("[data-slider-slide]");
+    const controls = slider.querySelectorAll("[data-slider-direction]");
+    const counter = slider.querySelector("[data-slider-counter]");
+    let currentIndex = 0;
+
+    function showSlide(nextIndex) {
+      if (!slides.length) {
+        return;
+      }
+
+      currentIndex = (nextIndex + slides.length) % slides.length;
+
+      slides.forEach((slide, index) => {
+        slide.classList.toggle("active", index === currentIndex);
+      });
+
+      if (counter) {
+        counter.textContent = `${currentIndex + 1} / ${slides.length}`;
+      }
     }
 
-    agromegaIndex = (nextIndex + agromegaSlides.length) % agromegaSlides.length;
-
-    agromegaSlides.forEach((slide, index) => {
-      slide.classList.toggle("active", index === agromegaIndex);
+    controls.forEach((control) => {
+      control.addEventListener("click", () => {
+        const direction = control.getAttribute("data-slider-direction");
+        showSlide(direction === "next" ? currentIndex + 1 : currentIndex - 1);
+      });
     });
 
-    if (slideCounter) {
-      slideCounter.textContent = `${agromegaIndex + 1} / ${agromegaSlides.length}`;
-    }
-  }
-
-  agromegaControls.forEach((control) => {
-    control.addEventListener("click", () => {
-      const direction = control.getAttribute("data-slider-direction");
-      showAgromegaSlide(direction === "next" ? agromegaIndex + 1 : agromegaIndex - 1);
-    });
+    showSlide(0);
   });
-
-  showAgromegaSlide(0);
 
   closeButton.addEventListener("click", closeModal);
 

@@ -541,25 +541,53 @@ h3 {
   color: var(--teal-dark);
 }
 
-.luna-gallery {
+.luna-slider {
   align-content: start;
   background: #e9e0d9;
   border-left: 1px solid #eaded7;
   display: grid;
-  gap: 16px;
-  grid-template-columns: 1.08fr 0.92fr;
+  grid-template-rows: auto auto auto;
+  min-height: 100%;
   padding: clamp(22px, 3vw, 34px);
 }
 
-.phone-shot {
-  background: transparent;
-  border: 0;
-  cursor: zoom-in;
-  padding: 0;
-  position: relative;
+.luna-slider .slide-counter {
+  border-color: #eaded7;
+  color: #735f64;
 }
 
-.phone-shot::before {
+.luna-slides {
+  aspect-ratio: 0.46 / 1;
+  background: #fbf8f5;
+  border: 1px solid #eaded7;
+  border-radius: 26px;
+  box-shadow: 0 18px 44px rgba(73, 57, 61, 0.16);
+  margin: 0 auto;
+  max-width: 360px;
+  overflow: hidden;
+  position: relative;
+  width: min(100%, 360px);
+}
+
+.luna-slide {
+  background: #fbf8f5;
+  border: 0;
+  cursor: zoom-in;
+  inset: 0;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: opacity 0.25s ease;
+  width: 100%;
+}
+
+.luna-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.luna-slide::before {
   border: 1px solid rgba(53, 47, 50, 0.1);
   border-radius: 24px;
   content: "";
@@ -569,22 +597,11 @@ h3 {
   z-index: 2;
 }
 
-.phone-shot img {
-  aspect-ratio: 0.393 / 1;
-  border-radius: 24px;
-  box-shadow: 0 18px 44px rgba(73, 57, 61, 0.16);
+.luna-slide img {
   height: 100%;
   object-fit: cover;
   object-position: top center;
   width: 100%;
-}
-
-.phone-shot.large {
-  grid-row: span 3;
-}
-
-.phone-shot:not(.large) img {
-  max-height: 250px;
 }
 
 .portfolio-rights {
@@ -724,23 +741,14 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .agromega-slider {
+  .agromega-slider,
+  .luna-slider {
     border-left: 0;
     border-top: 1px solid var(--line);
   }
 
-  .luna-gallery {
-    border-left: 0;
-    border-top: 1px solid #eaded7;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .phone-shot.large {
-    grid-row: auto;
-  }
-
-  .phone-shot:not(.large) img {
-    max-height: none;
+  .luna-slider {
+    border-top-color: #eaded7;
   }
 
 }
@@ -781,9 +789,8 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .luna-gallery {
-    gap: 12px;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .luna-slides {
+    max-width: 300px;
   }
 
   .section {
