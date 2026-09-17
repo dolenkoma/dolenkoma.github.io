@@ -686,6 +686,23 @@ h3 {
   grid-template-columns: minmax(0, 1fr) auto;
 }
 
+.contact-copy {
+  max-width: 860px;
+}
+
+.contact-copy h2 {
+  margin-bottom: 24px;
+}
+
+.contact-copy p:not(.eyebrow) {
+  color: #475467;
+  margin-bottom: 5px;
+}
+
+.contact-copy strong {
+  color: var(--ink);
+}
+
 .image-modal {
   align-items: center;
   background: rgba(10, 15, 22, 0.88);
