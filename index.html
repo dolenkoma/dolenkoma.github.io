@@ -15,8 +15,8 @@
       <span class="brand-name">Maria Dolenko</span>
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#approach">Approach</a>
+      <a href="#approach">Profile</a>
+      <a href="#work">Use cases</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -29,7 +29,7 @@
         <h1>I turn research, user needs, and digital complexity into clear product decisions.</h1>
         <p class="hero-text">I combine 8 years of SEO and user-intent research with hands-on SaaS web ownership, structured problem-solving, and product building. My strongest work is understanding what users and teams need, turning unclear ideas into practical flows and requirements, and carrying the work through research, documentation, QA, and implementation.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#work">View selected work</a>
+          <a class="button primary" href="#work">View use cases</a>
           <a class="button secondary" href="maria-dolenko-product-cv.pdf" target="_blank" rel="noopener">Download CV</a>
           <a class="button secondary" href="mailto:mashadolenko@gmail.com">Contact me</a>
         </div>
@@ -55,10 +55,11 @@
       </div>
     </section>
 
-    <section class="section intro-grid" id="approach">
-      <div>
-        <p class="eyebrow">What I do</p>
-        <h2>Product thinking backed by research and hands-on delivery.</h2>
+    <section class="section intro-grid" id="approach" aria-labelledby="profile-title">
+      <div class="intro-title">
+        <p class="eyebrow">Profile</p>
+        <h2 id="profile-title">Product thinking, grounded in research and delivery.</h2>
+        <p class="intro-location"><span class="status-dot" aria-hidden="true"></span> Marbella, Spain <span aria-hidden="true">·</span> Open to Málaga and remote roles</p>
       </div>
       <div class="intro-copy">
         <p>I start by understanding the user, the business context, and the problem behind a request. Then I structure the information, identify dependencies, shape user flows and requirements, and help turn the idea into work that a team can execute, test, and improve.</p>
@@ -66,9 +67,35 @@
       </div>
     </section>
 
+    <section class="capability-section" aria-labelledby="capability-title">
+      <div class="section capability-inner">
+        <div class="capability-heading">
+          <p class="eyebrow">Strengths</p>
+          <h2 id="capability-title">Ways I can help a product team.</h2>
+        </div>
+        <div class="capability-band">
+          <article class="capability">
+            <span class="capability-index">01</span>
+            <h3>Research &amp; product logic</h3>
+            <p>User intent, competitor research, user flows, feature scope, MVP thinking, interface states, data presentation, and product QA.</p>
+          </article>
+          <article class="capability">
+            <span class="capability-index">02</span>
+            <h3>Digital systems &amp; SEO</h3>
+            <p>SEO strategy, content structure, traffic analysis, CMS ownership, reusable systems, landing pages, and responsive web delivery.</p>
+          </article>
+          <article class="capability">
+            <span class="capability-index">03</span>
+            <h3>Coordination &amp; delivery</h3>
+            <p>Clear requirements, task breakdowns, cross-functional communication, AI-assisted implementation review, QA, and iteration.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="work">
       <div class="section-heading">
-        <p class="eyebrow">Selected work</p>
+        <p class="eyebrow">Use cases</p>
         <h2>Product direction, system ownership, and hands-on execution.</h2>
       </div>
 
@@ -197,71 +224,74 @@
             <li>Owned implementation, responsive behavior, SEO requirements, QA, issue resolution, and ongoing iteration across the system.</li>
           </ul>
         </div>
-        <button class="image-frame" type="button" data-full-image="challenge-game.png" aria-label="Open Wizer module screenshot">
-          <img src="challenge-game.png" alt="Interactive cybersecurity challenge module interface">
-        </button>
+        <div class="wizer-slider" data-slider aria-label="Wizer reusable web system examples">
+          <div class="slider-topline">
+            <p class="eyebrow">Reusable modules</p>
+            <span class="slide-counter" data-slider-counter aria-live="polite">1 / 5</span>
+          </div>
+
+          <div class="wizer-slides">
+            <article class="wizer-slide" data-slider-slide>
+              <button class="wizer-slide-image" type="button" data-full-image="challenge-game.png" aria-label="Open cybersecurity challenge screenshot">
+                <img src="challenge-game.png" alt="Interactive cybersecurity challenge module interface">
+              </button>
+              <div class="wizer-slide-copy">
+                <h3>Interactive challenge</h3>
+                <p>A hands-on learning module that turns security concepts into a guided user experience.</p>
+              </div>
+            </article>
+
+            <article class="wizer-slide" data-slider-slide>
+              <button class="wizer-slide-image" type="button" data-full-image="testimonial-grid.png" aria-label="Open testimonial grid screenshot">
+                <img src="testimonial-grid.png" alt="Reusable testimonial grid module">
+              </button>
+              <div class="wizer-slide-copy">
+                <h3>Testimonials module</h3>
+                <p>A flexible social-proof pattern reusable across pages and content lengths.</p>
+              </div>
+            </article>
+
+            <article class="wizer-slide" data-slider-slide>
+              <button class="wizer-slide-image" type="button" data-full-image="img-slider.png" aria-label="Open card slider screenshot">
+                <img src="img-slider.png" alt="Reusable card slider module">
+              </button>
+              <div class="wizer-slide-copy">
+                <h3>Card slider</h3>
+                <p>A configurable component for adding, reordering, and updating cards without code changes.</p>
+              </div>
+            </article>
+
+            <article class="wizer-slide" data-slider-slide>
+              <button class="wizer-slide-image" type="button" data-full-image="pricing-calculator.png" aria-label="Open pricing calculator screenshot">
+                <img src="pricing-calculator.png" alt="Pricing table and calculator module">
+              </button>
+              <div class="wizer-slide-copy">
+                <h3>Pricing calculator</h3>
+                <p>An interactive decision-support component with input logic, responsive plan cards, and clear conversion paths.</p>
+              </div>
+            </article>
+
+            <article class="wizer-slide" data-slider-slide>
+              <button class="wizer-slide-image" type="button" data-full-image="accordion.png" aria-label="Open accordion with filtering screenshot">
+                <img src="accordion.png" alt="Accordion module with filtering">
+              </button>
+              <div class="wizer-slide-copy">
+                <h3>Accordion with filtering</h3>
+                <p>A structured way to navigate large content sets using expandable sections and tag-based filtering.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-control" type="button" data-slider-direction="prev" aria-label="Previous Wizer example">Previous</button>
+            <button class="slider-control" type="button" data-slider-direction="next" aria-label="Next Wizer example">Next</button>
+          </div>
+        </div>
       </article>
-
-      <div class="module-grid" aria-label="Wizer system examples">
-        <article class="module-card">
-          <button class="module-image" type="button" data-full-image="testimonial-grid.png" aria-label="Open testimonial grid screenshot">
-            <img src="testimonial-grid.png" alt="Reusable testimonial grid module">
-          </button>
-          <div>
-            <h3>Testimonials module</h3>
-            <p>A flexible social-proof pattern that the team could reuse across different pages and content lengths.</p>
-          </div>
-        </article>
-
-        <article class="module-card">
-          <button class="module-image" type="button" data-full-image="img-slider.png" aria-label="Open card slider screenshot">
-            <img src="img-slider.png" alt="Reusable card slider module">
-          </button>
-          <div>
-            <h3>Card slider</h3>
-            <p>A configurable component that allowed content managers to add, reorder, and update cards without code changes.</p>
-          </div>
-        </article>
-
-        <article class="module-card">
-          <button class="module-image" type="button" data-full-image="pricing-calculator.png" aria-label="Open pricing calculator screenshot">
-            <img src="pricing-calculator.png" alt="Pricing table and calculator module">
-          </button>
-          <div>
-            <h3>Pricing calculator</h3>
-            <p>An interactive decision-support component with input logic, responsive plan cards, and clear conversion paths.</p>
-          </div>
-        </article>
-
-        <article class="module-card">
-          <button class="module-image" type="button" data-full-image="accordion.png" aria-label="Open accordion screenshot">
-            <img src="accordion.png" alt="Accordion module with filtering">
-          </button>
-          <div>
-            <h3>Accordion with filtering</h3>
-            <p>A structured way to navigate large content sets using expandable sections and tag-based filtering.</p>
-          </div>
-        </article>
-      </div>
 
       <aside class="portfolio-rights">
         <p><strong>Original portfolio work.</strong> The pet-project concepts, product logic, UX flows, visual direction, screens, and case materials shown here may not be copied, reproduced, or reused without written permission.</p>
       </aside>
-    </section>
-
-    <section class="section capability-band">
-      <div class="capability">
-        <h3>Research &amp; Product</h3>
-        <p>User intent, competitor research, user flows, feature scope, MVP thinking, product logic, interface states, data presentation, and product QA.</p>
-      </div>
-      <div class="capability">
-        <h3>SEO &amp; Web Systems</h3>
-        <p>SEO strategy, content structure, traffic analysis, CMS ownership, reusable systems, landing pages, HTML/CSS, responsive delivery, and web optimization.</p>
-      </div>
-      <div class="capability">
-        <h3>AI-assisted Delivery</h3>
-        <p>AI-assisted research and product building, structured prompts, task breakdowns, implementation review, QA, testing flows, and iterative improvement.</p>
-      </div>
     </section>
 
     <section class="section timeline" id="experience">
@@ -290,7 +320,7 @@
         <span class="period">2022 - 2025</span>
         <div>
           <h3>Wizer - Web Product / CMS Specialist</h3>
-          <p>Owned the CMS-based web system for a cybersecurity education SaaS startup. Turned recurring team needs into reusable page patterns, reduced dependency on developers, and managed implementation, SEO requirements, QA, and ongoing improvements across the website.</p>
+          <p>Owned and technically managed the full HubSpot website for a cybersecurity education SaaS company. Coded around 30 custom, reusable modules and handled site updates, responsive behavior, SEO, and QA, working closely with marketing, content, and design to turn team needs into reliable website improvements.</p>
         </div>
       </div>
 
